@@ -1,0 +1,67 @@
+"","Requirement Category","Category Description","Category Minimum Credit Amount","Category Maximum Credit Amount","Core Requirement"
+"1","Category L1","All of","23","24",FALSE
+"2","Category L1001","DATA/COMPSCI/STAT/INFO C8","4","4",TRUE
+"3","Category L1002","MATH 1A or MATH 10A or MATH 16A","3","4",FALSE
+"4","Category L1003","MATH 1B","4","4",TRUE
+"5","Category L1004","MATH 54 or STAT 89A or EECS 16A& EECS 16B or PHYSICS 89","4","4",FALSE
+"6","Category L1005","COMPSCI 61A or DATA C88C or COMPSCI C88C or ENGIN 7","4","4",FALSE
+"7","Category L1006","COMPSCI 61B","4","4",TRUE
+"8","Category U2","Choose one of the following: ","4","4",FALSE
+"9","Category U2001","DATA/COMPSCI/STAT C100","4","4",TRUE
+"10","Category U3","Choose two courses comprising 7+ units from the following:","7","8",FALSE
+"11","Category U3001","ASTRON 128","4","4",FALSE
+"12","Category U3002","COMPSCI 161","4","4",FALSE
+"13","Category U3003","COMPSCI 162","4","4",FALSE
+"14","Category U3004","COMPSCI 164","4","4",FALSE
+"15","Category U3005","COMPSCI 168","4","4",FALSE
+"16","Category U3006","COMPSCI 169 or COMPSCI 169A or COMPSCI W169A","4","4",FALSE
+"17","Category U3007","COMPSCI 170","4","4",FALSE
+"18","Category U3008","COMPSCI 186 or COMPSCI W186","4","4",FALSE
+"19","Category U3009","COMPSCI 188","4","4",FALSE
+"20","Category U3010","DATA 101","4","4",FALSE
+"21","Category U3011","DATA 144","3","3",FALSE
+"22","Category U3012","ECON 140 or ECON 141","4","4",FALSE
+"23","Category U3013","EECS 127","4","4",FALSE
+"24","Category U3014","EL ENG 120","4","4",FALSE
+"25","Category U3015","EL ENG 123","4","4",FALSE
+"26","Category U3016","ENVECON C118","4","4",FALSE
+"27","Category U3017","ESPM 174","4","4",FALSE
+"28","Category U3018","IAS C118","4","4",FALSE
+"29","Category U3019","IND ENG 115","3","3",FALSE
+"30","Category U3020","IND ENG 135","3","3",FALSE
+"31","Category U3021","IND ENG 165","4","4",FALSE
+"32","Category U3022","IND ENG 173","3","3",FALSE
+"33","Category U3023","INFO 159","4","4",FALSE
+"34","Category U3024","INFO 190","4","4",FALSE
+"35","Category U3025","NUC ENG 175","3","3",FALSE
+"36","Category U3026","PHYSICS 188","4","4",FALSE
+"37","Category U3027","STAT 135","4","4",FALSE
+"38","Category U3028","STAT 150","3","3",FALSE
+"39","Category U3029","STAT 151A","4","4",FALSE
+"40","Category U3030","STAT 152","4","4",FALSE
+"41","Category U3031","STAT 153","4","4",FALSE
+"42","Category U3032","STAT 158","4","4",FALSE
+"43","Category U3033","STAT 159","4","4",FALSE
+"44","Category U3034","UGBA 147","1","4",FALSE
+"45","Category U4","Choose one of the following:","4","4",FALSE
+"46","Category U4001","DATA/STAT C140","4","4",FALSE
+"47","Category U4002","EL ENG 126","4","4",FALSE
+"48","Category U4003","IND ENG 172","4","4",FALSE
+"49","Category U4004","STAT 134","4","4",FALSE
+"50","Category U5","Choose one of the following:","3","4",FALSE
+"51","Category U5001","COMPSCI 182","4","4",FALSE
+"52","Category U5002","COMPSCI 189","4","4",FALSE
+"53","Category U5003","DATA/STAT C102","4","4",FALSE
+"54","Category U5004","IND ENG 142","3","3",FALSE
+"55","Category U5005","STAT 154","4","4",FALSE
+"56","Category U6","Choose one of the following: ","3","4",FALSE
+"57","Category U6001","AFRICAM 134 or AFRICAM/AMERSTD C134","4","4",FALSE
+"58","Category U6002","BIO ENG 100","3","3",FALSE
+"59","Category U6003","CY PLAN 101","4","4",FALSE
+"60","Category U6004","DATA C104/HISTORY C184D/STS C104D","4","4",FALSE
+"61","Category U6005","DIGHUM 100","3","3",FALSE
+"62","Category U6006","INFO 188","3","3",FALSE
+"63","Category U6007","ISF 100J","4","4",FALSE
+"64","Category U6008","NWMEDIA 151AC","4","4",FALSE
+"65","Category U6009","PHILOS 121","4","4",FALSE
+"66","Category U6010","PB HLTH C160/ESPM C167","4","4",FALSE

@@ -1,0 +1,35 @@
+"","Requirement Category","Category Description","Category Minimum Credit Amount","Category Maximum Credit Amount","Core Course"
+"1","Category F1","COMP 1012",3,3,TRUE
+"2","Category F2","COMP 1020",3,3,TRUE
+"3","Category F3","MATH 1220",3,3,TRUE
+"4","Category F4","MATH 1230",3,3,TRUE
+"5","Category F5","MATH 1232",3,3,TRUE
+"6","Category F6","MATH 1240",3,3,TRUE
+"7","Category F7","STAT 1150",3,3,TRUE
+"8","Category G1","6 credit hours from the Faculty of Arts, which should include the required ""W"" course",6,6,FALSE
+"9","Category G2","3 credit hours of electives",3,3,FALSE
+"10","Category S1","COMP 2140",3,3,TRUE
+"11","Category S2","DATA 2010",3,3,TRUE
+"12","Category S3","MATH 2720",3,3,TRUE
+"13","Category S4","MATH 2740",3,3,TRUE
+"14","Category S5","STAT 2150",3,3,TRUE
+"15","Category S6","STAT 2400",3,3,TRUE
+"16","Category G3","12 credit hours of electives",12,12,FALSE
+"17","Category U1","COMP 3380",3,3,TRUE
+"18","Category U2","COMP 4360",3,3,TRUE
+"19","Category U3","DATA 3010",3,3,TRUE
+"20","Category U4","DATA 4010",6,6,TRUE
+"21","Category U5","MATH 3490",3,3,TRUE
+"22","Category U6","STAT 3100",3,3,TRUE
+"23","Category U7","STAT 3150",3,3,TRUE
+"24","Category U8","STAT 3450",3,3,TRUE
+"25","Category U9","3 credit hours from: COMP 2080 COMP 2150 COMP 4510 COMP 4710",3,3,FALSE
+"26","Category U10","3 credit hours from: MATH 2070 MATH 2080 MATH 2090 MATH 2180 MATH 4370",3,3,FALSE
+"27","Category U11","3 credit hours from: STAT 2300 STAT 2800 STAT 3030 STAT 3550 STAT 3690 STAT 4100 STAT 4150 STAT 4250",3,3,FALSE
+"28","Category G4","3 additional credit hours from the Faculty of Science 3",3,3,FALSE
+"29","Category G5","21 credit hours of electives 3",21,21,FALSE
+"30","Category G6","The above 33 credit hours must include at least 12 credit hours of Faculty of Science courses taken at the 3000 or 4000 level.",NA,NA,FALSE
+"31","Category C1","SCI 3980",0,0,TRUE
+"32","Category C2","SCI 3990",0,0,TRUE
+"33","Category C3","SCI 4980",0,0,TRUE
+"34","Category C4","SCI 4990",0,0,TRUE

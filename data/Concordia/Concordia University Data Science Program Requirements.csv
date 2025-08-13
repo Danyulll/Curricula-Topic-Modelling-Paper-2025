@@ -1,0 +1,22 @@
+"","Requirement Category","Category Description","Category Minimum Credit Amount","Category Maximum Credit Amount","Core Requirement"
+"1","Category G1","MAST 218",3,3,TRUE
+"2","Category G2","MAST 221",3,3,TRUE
+"3","Category G3","MAST 234",3,3,TRUE
+"4","Category G4","MAST 333",3,3,TRUE
+"5","Category G5","MAST 334",3,3,TRUE
+"6","Category G6","MAST 387",3,3,TRUE
+"7","Category G7","STAT 280",3,3,TRUE
+"8","Category G8","STAT 380",3,3,TRUE
+"9","Category G9","STAT 385",3,3,TRUE
+"10","Category G10","COMP 228",3,3,TRUE
+"11","Category G11","COMP 232",3,3,TRUE
+"12","Category G12","COMP 248",3.5,3.5,TRUE
+"13","Category G13","COMP 249",3.5,3.5,TRUE
+"14","Category G14","COMP 335",3,3,TRUE
+"15","Category G15","COMP 352",3,3,TRUE
+"16","Category G16","COMP 353",4,4,TRUE
+"17","Category G17","ENCS 282",4,4,TRUE
+"18","Category G18","ENCS 393",3,3,TRUE
+"19","Category G19","SOEN 471",3,3,TRUE
+"20","Category G20","6 credits: Two MAST/MATH/STAT electives (at least 300 level) with prior department approval",6,6,FALSE
+"21","Category G21","6 credits minimum of Computer Science electives chosen from 400-level COMP/SOEN courses with prior departmental approval",6,6,FALSE

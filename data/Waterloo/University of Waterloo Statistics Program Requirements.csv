@@ -1,0 +1,9 @@
+"","Requirement Category","Category Description","Category Minimum Credit Amount","Category Maximum Credit Amount","Core Requirement"
+"1","Category G1","One of: MATH 237, MATH 247",3,3,FALSE
+"2","Category G2","All of: ENGL 378, STAT 330, STAT 331, STAT 332, STAT 333",15,15,TRUE
+"3","Category G3","One of: MATH 239, MATH 249, AMATH 231, AMATH 242, CS 371, AMATH 250, AMATH 251, AMATH 350",3,3,FALSE
+"4","Category G4","Two 400-level STAT courses: ",6,6,FALSE
+"5","Category G5","One additional 300- or 400-level STAT course: ",3,3,FALSE
+"6","Category G6","One of: CS 457, CS 485, CS 486One additional 400-level STAT course",3,3,FALSE
+"7","Category G7","Four additional 300- or 400-level math courses.: ",12,12,FALSE
+"8","Category G8","At least three additional math courses: ",9,9,FALSE

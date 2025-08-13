@@ -1,0 +1,7 @@
+"","Requirement Category","Category Description","Category Minimum Credit Amount","Category Maximum Credit Amount","Core Requirement"
+"1","Category G1","One of: CS 136, CS 146",3,3,FALSE
+"2","Category G2","One of: MATH 239, MATH 249",3,3,FALSE
+"3","Category G3","All of: CS 136L, CS 240, CS 241, CS 245, CS 246, CS 251, CS 341, CS 348, STAT 341",25.5,25.5,TRUE
+"4","Category G4","One of: CS 431, CS 451",3,3,FALSE
+"5","Category G5","One of: CS 480, CS 485, CS 486, STAT 441",3,3,FALSE
+"6","Category G6","Two additional courses from the following list: CS 480, CS 485, CS 486, STAT 431, STAT 440, STAT 441, STAT 442, STAT 443, STAT 444",6,6,FALSE

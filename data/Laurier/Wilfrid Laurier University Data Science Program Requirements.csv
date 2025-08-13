@@ -1,0 +1,26 @@
+"","Requirement Category","Category Description","Category Minimum Credit Amount","Category Maximum Credit Amount","Core Requirement"
+"1","Category G1","BU111 or ENTR100","3","3",FALSE
+"2","Category G2","CP104","3","3",TRUE
+"3","Category G3","CP164","3","3",TRUE
+"4","Category G4","CP213","3","3",TRUE
+"5","Category G5","CP264","3","3",TRUE
+"6","Category G6","CP312","3","3",TRUE
+"7","Category G7","CP317","3","3",TRUE
+"8","Category G8","CP363","3","3",TRUE
+"9","Category G9","CP373","3","3",TRUE
+"10","Category G10","CP321","3","3",TRUE
+"11","Category G11","CP322","3","3",TRUE
+"12","Category G12","CP421","3","3",TRUE
+"13","Category G13","DATA100","3","3",TRUE
+"14","Category G14","MA103","3","3",TRUE
+"15","Category G15","MA121 or MA120","3","3",FALSE
+"16","Category G16","MA122","3","3",TRUE
+"17","Category G17","MA200","3","3",TRUE
+"18","Category G18","MA238","3","3",TRUE
+"19","Category G19","MA371 or ST361","3","3",FALSE
+"20","Category G20","ST259","3","3",TRUE
+"21","Category G21","ST260","3","3",TRUE
+"22","Category G22","ST362","3","3",TRUE
+"23","Category G23","ST494","3","3",TRUE
+"24","Category G24","3 senior BU credit (BU425: Business Analytics is recommended)","3","3",FALSE
+"25","Category G25","15 senior CP, MA, ST, DATA elective credits, which must include at least 12 senior credits of which at least 9 credits must be at the 300 or 400 level.","15","15",FALSE

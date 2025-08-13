@@ -1,0 +1,20 @@
+"","Requirement Category","Category Description","Category Minimum Credit Amount","Category Maximum Credit Amount","Core Requirement"
+"1","Category S1","Concentration in Financial Risk Analysis",18,18,NA
+"2","Category S1A","MA170",3,3,TRUE
+"3","Category S1B","MA270",3,3,TRUE
+"4","Category S1C","MA477",3,3,TRUE
+"5","Category S1D","ST473",3,3,TRUE
+"6","Category S1E","One course from: MA348, MA492, ST361, ST474",3,3,FALSE
+"7","Category S1F","MA371",3,3,TRUE
+"8","Category S2","Concentration in Big Data",15,15,NA
+"9","Category S2A","CP372",3,3,TRUE
+"10","Category S2B","CP476",3,3,TRUE
+"11","Category S2C","CP468",3,3,TRUE
+"12","Category S2D","CP422",3,3,TRUE
+"13","Category S2E","CP423",3,3,TRUE
+"14","Category S3","Concentration in Statistical Analysis Concentration",15,15,NA
+"15","Category S3A","DATA200",3,3,TRUE
+"16","Category S3B","3 credit: ST358 and ST359",3,3,FALSE
+"17","Category S3C","ST361",3,3,TRUE
+"18","Category S3D","ST463",3,3,TRUE
+"19","Category S3E","3 Additional credit from ST courses at the 300 or 400 level; MA371 taken in the core",3,3,FALSE

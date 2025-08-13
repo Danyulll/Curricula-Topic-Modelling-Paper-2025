@@ -1,0 +1,2 @@
+"","Course Code","Course Name","Course Description","Credit Amount","Antirequisite","Corequisite","Prerequisite","Breadth Category","Quantitative Requirement","Writing Requirement"
+"1","DATA 180","Undergraduate Seminar in Data Science","A seminar primarily for students undertaking a major or an honours program in Data Science.",1,"Students with credit for DATA (or MSSC) 480 cannot receive credit for DATA (or MSSC) 180.","","Prerequisite: Major or honours in Data Science or permission of the program director.","",FALSE,FALSE

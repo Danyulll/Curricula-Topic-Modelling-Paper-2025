@@ -1,0 +1,16 @@
+"","Requirement Category","Category Description","Category Minimum Credit Amount","Category Maximum Credit Amount","Core Requirement"
+"1","Category L1","Students complete all of: BUS 200, BUS 217W, BUS 251, BUS 272, ",12,12,TRUE
+"2","Category L2","Students complete all of: CMPT 120, CMPT 125, CMPT 225, CMPT 276, CMPT 295, ",15,15,TRUE
+"3","Category L3","Students complete both of: MACM 101, MACM 201, ",6,6,TRUE
+"4","Category L4","Students complete: DATA 180, ",1,1,TRUE
+"5","Category L5","Students complete one of: MATH 150, MATH 151, MATH 154, MATH 157, ",3,4,FALSE
+"6","Category L6","Both of: MATH 152, MATH 208W, ",6,6,TRUE
+"7","Category L7","One of: MATH 232, MATH 240, ",3,3,FALSE
+"8","Category L8","Students complete all of: STAT 240, STAT 260, STAT 261, ",6,6,TRUE
+"9","Category U1","One of: BUS 232, STAT 201, STAT 203, STAT 205, STAT 270, ",3,3,FALSE
+"10","Category U2","Students complete all of: BUS 343, BUS 360W, BUS 439, BUS 445, BUS 345, BUS 336, ",19,19,TRUE
+"11","Category U3","Students complete all of: CMPT 300, CMPT 307, CMPT 353, CMPT 354, CMPT 454, ",15,15,TRUE
+"12","Category U4","Students complete one of: MATH 308, MATH 309, ",3,3,FALSE
+"13","Category U5","Students complete one of: ECON 333, STAT 302, STAT 305, STAT 350, ",3,4,FALSE
+"14","Category U6","Both of: STAT 403, STAT 452, ",6,6,TRUE
+"15","Category U7","One of: STAT 445, STAT 475, STAT 485, ",3,3,FALSE
