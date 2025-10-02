@@ -234,7 +234,7 @@ json_lda_3_vem <- LDAvis::createJSON(
   phi = phi_3_vem, theta = theta_3_vem, vocab = vocab,
   doc.length = doc_length, term.frequency = term_freq
 )
-LDAvis::serVis(json_lda_3_vem, out.dir = "clean/viz/lda_3_vem", open.browser = T)
+LDAvis::serVis(json_lda_3_vem, out.dir = "ldavis/lda_3_vem", open.browser = T)
 
 # k = 10
 phi_10_vem   <- posterior(lda.out.10.vem)$terms
@@ -243,7 +243,10 @@ json_lda_10_vem <- LDAvis::createJSON(
   phi = phi_10_vem, theta = theta_10_vem, vocab = vocab,
   doc.length = doc_length, term.frequency = term_freq, mds.method = jsPCA
 )
-LDAvis::serVis(json_lda_10_vem, out.dir = "clean/viz/lda_10_vem", open.browser = T)
+LDAvis::serVis(json_lda_10_vem, out.dir = "ldavis/lda_10_vem", open.browser = T)
+
+
+
 
 # ============================================================================
 # Top-Term Plots (VEM)
@@ -272,22 +275,39 @@ top_terms_10_vem <- tidy(lda.out.10.vem, matrix = "beta") |>
   ungroup() |>
   mutate(term = reorder_within(term, beta, topic))
 
+# Desired display order by label:
+# Machine Learning, Calculus, Linear Algebra, Algorithms & Data Structures,
+# Probability, Applied Statistics, Business Analytics, Software Engineering,
+# Information Systems, Scientific Computing
+topic_order_nums <- c(7, 5, 9, 8, 2, 3, 10, 6, 1, 4)
+
+top_terms_10_vem <- tidy(lda.out.10.vem, matrix = "beta") |>
+  group_by(topic) |>
+  slice_max(beta, n = 30) |>
+  ungroup() |>
+  mutate(
+    term  = reorder_within(term, beta, topic),
+    topic = factor(topic, levels = topic_order_nums)
+  )
+
 topic_labels_vem <- c(
-  "1"  = "Information Systems & Software Architecture",
-  "2"  = "Probability Theory & Statistical Distributions",
-  "3"  = "Applied Statistics & Data Analysis",
-  "4"  = "Computational Physics & Scientific Computing",
-  "5"  = "Mathematical Analysis & Calculus",
-  "6"  = "Software Engineering & Technical Communication",
-  "7"  = "Machine Learning & Database Systems",
+  "1"  = "Information Systems",
+  "2"  = "Probability",
+  "3"  = "Applied Statistics",
+  "4"  = "Scientific Computing",
+  "5"  = "Calculus",
+  "6"  = "Software Engineering",
+  "7"  = "Machine Learning",
   "8"  = "Algorithms & Data Structures",
-  "9"  = "Linear Algebra & Numerical Methods",
-  "10" = "Business Analytics & Market Research"
+  "9"  = "Linear Algebra",
+  "10" = "Business Analytics"
 )
 
 terms_plot_10_vem <- ggplot(top_terms_10_vem, aes(x = term, y = beta, fill = factor(topic))) +
   geom_col(show.legend = FALSE) +
-  facet_wrap(~ topic, scales = "free", labeller = labeller(topic = topic_labels_vem)) +
+  facet_wrap(~ topic,
+             scales = "free",
+             labeller = labeller(topic = topic_labels_vem)) +
   coord_flip() +
   scale_x_reordered() +
   labs(title = "Top 30 Words per Topic (10-Topic VEM)", x = NULL, y = "Probability") +
@@ -306,7 +326,30 @@ ggsave("clean/images/top_terms_10_topics_vem.png", terms_plot_10_vem, width = 15
 universities <- c("Berkeley","Concordia","Laurier","Manitoba","SFU",
                   "Toronto","Waterloo","Western","UBCO")
 
-make_uni_plot <- function(lda_fit, k, title, topic_names) {
+# make_uni_plot <- function(lda_fit, k, title, topic_names) {
+#   uni_topics <- tidy(lda_fit, matrix = "gamma")
+#   out <- lapply(universities, function(uni) {
+#     regex <- paste0("^", uni)
+#     gamma_vals <- vapply(1:k, function(i) {
+#       test <- subset(uni_topics, topic == i)
+#       idx  <- which(str_detect(test$document, regex))
+#       sum(test[idx, "gamma", drop = TRUE])
+#     }, numeric(1))
+#     if (sum(gamma_vals) > 0) gamma_vals <- gamma_vals / sum(gamma_vals)
+#     data.frame(document = rep(uni, k), topic = topic_names, gamma = gamma_vals)
+#   })
+#   vizdf <- do.call(rbind, out)
+#   vizdf <- na.omit(vizdf)
+#   
+#   ggplot(vizdf %>% mutate(topic = reorder(topic, gamma)),
+#          aes(topic, gamma, fill = factor(document))) +
+#     geom_col(show.legend = FALSE) +
+#     facet_wrap(~ document, scales = "fixed") +
+#     labs(x = "Topic", y = "Document-Topic Probabilities", title = title) +
+#     coord_flip()
+# }
+
+make_uni_plot <- function(lda_fit, k, title, topic_names, topic_display_order = NULL) {
   uni_topics <- tidy(lda_fit, matrix = "gamma")
   out <- lapply(universities, function(uni) {
     regex <- paste0("^", uni)
@@ -318,16 +361,31 @@ make_uni_plot <- function(lda_fit, k, title, topic_names) {
     if (sum(gamma_vals) > 0) gamma_vals <- gamma_vals / sum(gamma_vals)
     data.frame(document = rep(uni, k), topic = topic_names, gamma = gamma_vals)
   })
-  vizdf <- do.call(rbind, out)
-  vizdf <- na.omit(vizdf)
+  vizdf <- do.call(rbind, out) |> na.omit()
   
-  ggplot(vizdf %>% mutate(topic = reorder(topic, gamma)),
-         aes(topic, gamma, fill = factor(document))) +
-    geom_col(show.legend = FALSE) +
-    facet_wrap(~ document, scales = "fixed") +
-    labs(x = "Topic", y = "Document-Topic Probabilities", title = title) +
-    coord_flip()
+  if (!is.null(topic_display_order)) {
+    # Fixed order (e.g., for K = 10) with FIRST item shown at the TOP
+    vizdf$topic <- factor(vizdf$topic, levels = topic_display_order)
+    
+    ggplot(vizdf, aes(topic, gamma, fill = factor(document))) +
+      geom_col(show.legend = FALSE) +
+      facet_wrap(~ document, scales = "fixed") +
+      labs(x = "Topic", y = "Document-Topic Probabilities", title = title) +
+      # key line: reverse the discrete scale so first level appears at the TOP after flipping
+      scale_x_discrete(limits = rev(topic_display_order)) +
+      coord_flip()
+  } else {
+    # Data-driven per-panel order (keeps your K = 3 behavior)
+    ggplot(vizdf %>% mutate(topic = reorder(topic, gamma)),
+           aes(topic, gamma, fill = factor(document))) +
+      geom_col(show.legend = FALSE) +
+      facet_wrap(~ document, scales = "fixed") +
+      labs(x = "Topic", y = "Document-Topic Probabilities", title = title) +
+      coord_flip()
+  }
+  
 }
+
 
 # k = 3
 topic_names_3 <- c("Computer Science","Math & Statistics","Machine Learning")
@@ -340,22 +398,40 @@ ggsave("clean/images/university_topics_3_vem.png", uni_plot_3_vem, width = 10, h
 
 # k = 10
 topic_names_10 <- c(
-  "Information Systems & Software Architecture",
-  "Probability Theory & Statistical Distributions",
-  "Applied Statistics & Data Analysis",
-  "Computational Physics & Scientific Computing",
-  "Mathematical Analysis & Calculus",
-  "Software Engineering & Technical Communication",
-  "Machine Learning & Database Systems",
-  "Algorithms & Data Structures",
-  "Linear Algebra & Numerical Methods",
-  "Business Analytics & Market Research"
+  "1"  = "Information Systems",
+  "2"  = "Probability",
+  "3"  = "Applied Statistics",
+  "4"  = "Scientific Computing",
+  "5"  = "Calculus",
+  "6"  = "Software Engineering",
+  "7"  = "Machine Learning",
+  "8"  = "Algorithms & Data Structures",
+  "9"  = "Linear Algebra",
+  "10" = "Business Analytics"
 )
+
+topic_display_order_10 <- c(
+  "Machine Learning",
+  "Calculus",
+  "Linear Algebra",
+  "Algorithms & Data Structures",
+  "Probability",
+  "Applied Statistics",
+  "Business Analytics",
+  "Software Engineering",
+  "Information Systems",
+  "Scientific Computing"
+)
+
+
+
 uni_plot_10_vem <- make_uni_plot(
   lda_fit = lda.out.10.vem, k = 10,
   title = "University Topic Distributions (10-Topic VEM)",
-  topic_names = topic_names_10
+  topic_names = topic_names_10,
+  topic_display_order = topic_display_order_10
 )
+
 ggsave("clean/images/university_topics_10_vem.png", uni_plot_10_vem, width = 12, height = 6, dpi = 600)
 
 # Done.
